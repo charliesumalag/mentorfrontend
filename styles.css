@@ -1,0 +1,367 @@
+/* FONTS STYLE Hanken Grotesk */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap");
+
+/* RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* MAIN STYLE */
+html {
+  /* font-size: 10px; */
+  /* 10 px / 16px = 0.625 or 62.5% */
+  /* Percentage of user's browser font-size setting to respect user font-size */
+  font-size: 62.5%;
+}
+body {
+  background-color: #fff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+  /* width: 144rem; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  letter-spacing: -0.7px;
+}
+
+/* CONTENT */
+.main-container {
+  display: grid;
+  width: 78.3rem;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 1rem 1rem 2rem 0 rgba(0, 0, 0, 0.06);
+  border-radius: 3rem;
+  margin: 0 auto;
+}
+/* LEFT SIDE */
+.left-side {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  height: 100%;
+  border-radius: 3rem;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.4rem 0;
+}
+.header {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.left-header {
+  color: hsl(241, 100%, 89%);
+}
+.result-text {
+  font-size: 5.8rem;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  border-radius: 50%;
+  padding-top: 6.6rem;
+  padding-bottom: 4.8rem;
+  padding-left: 6.6rem;
+  padding-right: 6.6rem;
+
+  gap: 2rem;
+  /* width: 20rem;
+  height: 20rem; */
+  margin: 4.4rem;
+}
+.text-left {
+  font-size: 1.8rem;
+  color: hsla(221, 100%, 96%, 0.3);
+  font-weight: 600;
+}
+.great-text {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2.7rem;
+}
+.description-text {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0 6rem;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: hsla(221, 100%, 96%, 0.8);
+}
+
+/* RIGHT SIDE */
+.right-side {
+  margin: 0 4rem;
+  padding-top: 4.4rem;
+}
+.summary-main-content {
+  margin-top: 3.4rem;
+}
+.right-header {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+}
+.left-side-text {
+  display: flex;
+  gap: 1.6rem;
+  width: 100%;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.left-side-text:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+.out-of-text {
+  margin-left: auto;
+}
+.number {
+  color: hsla(224, 30%, 27%, 0.8);
+}
+.of-text {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.04);
+  color: hsl(0, 100%, 67%);
+}
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.06);
+  color: hsl(39, 100%, 56%);
+}
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.05);
+  color: hsl(166, 100%, 37%);
+}
+.visual {
+  background-color: hsla(241, 100%, 89%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+.link:link,
+.link:visited {
+  padding: 2rem 0;
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 3rem;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  text-align: center;
+  margin-top: 4.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.link:hover,
+.link:active {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+/* QUERRIES */
+/* 480 viewport screen */
+@media (max-width: 30em) {
+  .main-container {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .left-side {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    /* padding: 4.4rem 2rem; */
+    padding-top: 2.9rem;
+    padding-bottom: 4.1rem;
+  }
+  .result-text {
+    font-size: 5.2rem;
+    padding-top: 4.2rem;
+    padding-bottom: 2.8rem;
+    padding-left: 4.6rem;
+    padding-right: 4.6rem;
+    letter-spacing: 1px;
+    gap: 2rem;
+    margin: 2.8rem 0;
+  }
+  .text-left {
+    font-size: 1.6rem;
+    color: hsla(221, 100%, 96%, 0.3);
+    font-weight: 600;
+  }
+  .great-text {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0;
+  }
+  .description-text {
+    font-size: 1.5rem;
+    padding: 0 6.2rem;
+    line-height: 1.5;
+  }
+  .text {
+    font-size: 1.2rem;
+    color: hsla(221, 100%, 96%, 0.3);
+    font-weight: 600;
+  }
+
+  /* rightside */
+  .right-side {
+    margin: 0 4rem;
+    padding-top: 2.8rem;
+    height: 100%;
+  }
+
+  .summary-main-content {
+    margin-top: 2.6rem;
+  }
+  .left-side-text {
+    padding: 1.8rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+  }
+  .left-side-text:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  .link:link,
+  .link:visited {
+    padding: 2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+}
+/* 375 viewport screen */
+@media (max-width: 23.4375em) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .main-container {
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .left-side {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    /* padding: 4.4rem 2rem; */
+    padding-top: 2.9rem;
+    padding-bottom: 4.1rem;
+  }
+  .result-text {
+    font-size: 4.6rem;
+    padding-top: 4.2rem;
+    padding-bottom: 2.8rem;
+    padding-left: 4.6rem;
+    padding-right: 4.6rem;
+    letter-spacing: 1px;
+    gap: 2rem;
+    margin: 2.8rem 0;
+  }
+  .great-text {
+    font-size: 2.1rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0;
+  }
+  .description-text {
+    font-size: 1.5rem;
+    padding: 0 6.2rem;
+    line-height: 1.5;
+  }
+  .text-left {
+    font-size: 1.2rem;
+    color: hsla(221, 100%, 96%, 0.3);
+    font-weight: 600;
+  }
+
+  /* rightside */
+  .right-side {
+    margin: 0 4rem;
+    padding-top: 2.8rem;
+    height: 100%;
+  }
+
+  .summary-main-content {
+    margin-top: 2.6rem;
+  }
+  .left-side-text {
+    padding: 1.8rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+  }
+  .left-side-text:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  .link:link,
+  .link:visited {
+    padding: 2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* .result-text {
+    font-size: 4.8rem;
+    font-weight: 800;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to bottom,
+      hsla(256, 72%, 46%, 1),
+      hsla(241, 72%, 46%, 0)
+    );
+    border-radius: 50%;
+    padding: 6rem;
+    gap: 0.8rem;
+    width: 10rem;
+    height: 10rem;
+    margin: 2.4rem;
+  } */
+
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (PX)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 90  */
